@@ -13,6 +13,7 @@ class Cep extends Component {
 
   componentDidMount(){
     this.buscarCEP();
+    
   }
 
   componentDidUpdate(){
