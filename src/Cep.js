@@ -17,6 +17,9 @@ class Cep extends Component {
 
   componentDidUpdate(){
     this.buscarCEP();
+
+
+    
   }
 
 
@@ -35,7 +38,7 @@ class Cep extends Component {
       <div>
         <input type="number" value={this.state.cep} onChange={this.definirCEP.bind(this)}></input>
         <div>
-          Logradouro: {this.state.retorno.logradouro}
+          Logradouro1: {this.state.retorno.logradouro}
         </div>
         <div>
           Cidade: {this.state.retorno.localidade}
