@@ -7,26 +7,20 @@ class Cep extends Component {
     super(props);
     this.state = {
       retorno : '',
-      cep : 60525571
+      cep : 1111
     };
   }
-
   componentDidMount(){
-    this.buscarCEP();
-    
+    this.buscarCEP();  
   }
-
   componentDidUpdate(){
     this.buscarCEP();    
   }
-
-
   buscarCEP(){
     axios.get('https://viacep.com.br/ws/' + this.state.cep + '/json/')
       .then(x => this.setState({ retorno : x.data}))
       .catch(erro => console.log(erro))
   }
-
   definirCEP(event){
     this.setState({ cep : event.target.value});
   }
